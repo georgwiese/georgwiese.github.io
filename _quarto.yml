@@ -23,3 +23,7 @@ format:
       light: [default, theme-light.scss]
       dark: [default, theme-dark.scss]
     css: styles.css
+    syntax-highlighting:
+      light: arrow
+      dark: arrow-dark
+    include-after-body: lean-highlight.html
