@@ -1,0 +1,65 @@
+.navbar {
+  background-color: #f5f5f5 !important;
+  border-bottom: 0;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .quarto-color-scheme-toggle,
+.navbar #quarto-search,
+.navbar #quarto-search .aa-DetachedSearchButton,
+.navbar #quarto-search .aa-DetachedSearchButtonIcon,
+.navbar #quarto-search .aa-DetachedSearchButtonIcon svg {
+  color: #111111 !important;
+  fill: #111111 !important;
+  stroke: #111111 !important;
+}
+
+.quarto-dark .navbar {
+  background-color: #202020 !important;
+}
+
+.quarto-dark .navbar .navbar-brand,
+.quarto-dark .navbar .nav-link,
+.quarto-dark .navbar .quarto-color-scheme-toggle,
+.quarto-dark .navbar #quarto-search,
+.quarto-dark .navbar #quarto-search .aa-DetachedSearchButton,
+.quarto-dark .navbar #quarto-search .aa-DetachedSearchButtonIcon,
+.quarto-dark .navbar #quarto-search .aa-DetachedSearchButtonIcon svg {
+  color: #f5f5f5 !important;
+  fill: #f5f5f5 !important;
+  stroke: #f5f5f5 !important;
+}
+
+.quarto-color-scheme-toggle {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+
+.quarto-color-scheme-toggle > i,
+.quarto-color-scheme-toggle > svg {
+  display: none;
+}
+
+.quarto-color-scheme-toggle::before {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.quarto-light .quarto-color-scheme-toggle::before {
+  content: "☾";
+}
+
+.quarto-light .quarto-color-scheme-toggle::after {
+  content: "Dark mode";
+}
+
+.quarto-dark .quarto-color-scheme-toggle::before {
+  content: "☀︎";
+}
+
+.quarto-dark .quarto-color-scheme-toggle::after {
+  content: "Light mode";
+}
