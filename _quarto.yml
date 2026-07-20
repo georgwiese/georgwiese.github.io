@@ -20,10 +20,10 @@ website:
     center: "© Georg Wiese"
   comments:
     giscus:
-      repo: REPLACE-WITH-GITHUB-REPO
-      repo-id: REPLACE-WITH-REPO-ID
-      category: REPLACE-WITH-CATEGORY
-      category-id: REPLACE-WITH-CATEGORY-ID
+      repo: georgwiese/georgwiese.github.io
+      repo-id: R_kgDOTeNUCQ
+      category: Announcements
+      category-id: DIC_kwDOTeNUCc4DBltP
       mapping: pathname
       reactions-enabled: true
       loading: lazy
