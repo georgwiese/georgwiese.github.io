@@ -1,15 +1,10 @@
 ---
-title: "Georg Wiese"
+comments: false
 listing:
   contents: posts
   sort: "date desc"
   type: default
-  categories: true
   sort-ui: false
   filter-ui: false
-  feed:
-    title: "Georg Wiese"
-    description: "Personal technical blog"
 page-layout: full
-title-block-banner: false
 ---

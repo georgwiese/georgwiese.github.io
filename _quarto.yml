@@ -3,21 +3,9 @@ project:
   output-dir: _site
 
 website:
-  title: "Georg Wiese"
-  site-url: https://georgwiese.github.io/
-  description: "Personal technical blog"
+  title: "Blog"
   navbar:
-    left:
-      - text: "Home"
-        href: index.qmd
-      - text: "About"
-        href: about.qmd
-    right:
-      - icon: rss
-        href: index.xml
-        aria-label: RSS feed
-  page-footer:
-    center: "© Georg Wiese"
+    logo-href: /
   comments:
     giscus:
       repo: georgwiese/georgwiese.github.io
@@ -31,13 +19,6 @@ website:
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
-    highlight-style: github
-    toc: true
-    toc-depth: 3
-    toc-title: "Contents"
-    code-copy: true
-    code-overflow: wrap
-    math: mathjax
-    link-external-newwindow: true
+      light: [default, theme-light.scss]
+      dark: [default, theme-dark.scss]
+    css: styles.css

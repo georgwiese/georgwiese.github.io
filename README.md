@@ -40,7 +40,6 @@ mkdir posts/my-new-post
 ---
 title: "My New Post"
 date: 2025-06-01
-categories: [category]
 ---
 
 Post content here.
