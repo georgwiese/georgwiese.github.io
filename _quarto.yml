@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Blog"
+  search: false
   navbar:
     logo-href: /
   comments:
