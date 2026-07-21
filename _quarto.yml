@@ -7,6 +7,8 @@ website:
   search: false
   navbar:
     logo-href: /
+  page-footer:
+    left: "© 2026 Georg Wiese"
   comments:
     giscus:
       repo: georgwiese/georgwiese.github.io
