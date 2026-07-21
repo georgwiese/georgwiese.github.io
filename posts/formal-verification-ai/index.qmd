@@ -35,6 +35,20 @@ One special case of this framework is [Andrej Karpathy's autoresearch project](h
 
 The point of this framework is that little human effort is needed to evaluate each generated implementation change. Hard constraints are proven to be met by the agent. Optimization objectives are measured automatically. If there are several objectives, a human may still need to choose among tradeoffs—what if quality improves, but runtime also increases?—although even that could potentially be automated.
 
+<details class="blog-aside">
+<summary>Aside: Analogies to machine learning</summary>
+
+Before I worked in applied cryptography, I was a machine learning engineer building tools to [segment 3D image data](https://scalableminds.com/voxelytics). The analogies between this approach and machine learning are striking:
+
+- Because the agents can see the benchmarks and repeatedly optimize against them, the benchmarks are essentially the *training set*. Each one can be *labeled*, i.e., come with a desired output, or *unlabeled*.
+- *Overfitting* is a risk of this approach. We want the resulting algorithm to also perform well on inputs outside the training set.
+- One way to mitigate overfitting is to give instructions like "try to write general passes" or "don't add a new pass, generalize an existing one". It's a form of *regularization*.
+- Asking agents to optimize a metric resembles *reinforcement learning*. For example, our circuit optimizer performed poorly on one metric simply because I hadn't told the agents to optimize it. A poor *reward* design!
+- More generally, *specification gaming* is a serious issue. We did catch an agent [exploit a weakness in the spec](https://github.com/powdr-labs/apc-optimizer/pull/147#issuecomment-5003090287).
+- And, of course, *we no longer understand the implementation*. We measure how well the software works in practice, but we also get a proof that it satisfies the formal specification. That is stronger than the usual machine-learning setting.
+
+</details>
+
 ## A Hello World example
 
 Suppose we wanted to implement a function that returns the k-th smallest element of a list of integers. We'll start with Lean definitions that capture what it means for this function to be correct:
@@ -111,17 +125,6 @@ In practice, "reviewing" a generated implementation PR consists of checking for 
 **Integration**: We have integrated this code into our main codebase as an alternative to our existing Rust implementation. Lean can be compiled to C, which is then invoked from Rust via FFI.
 
 For more information about this specific use case, see our [blog post on formally verified autoprecompiles](https://powdr.org/blog/formally-verified-autoprecompiles).
-
-## Aside: Analogies to machine learning
-
-Before I worked in applied cryptography, I was a machine learning engineer building tools to [segment 3D image data](https://scalableminds.com/voxelytics). The analogies between this approach and machine learning are striking:
-
-- Because the agents can see the benchmarks and repeatedly optimize against them, the benchmarks are essentially the *training set*. Each one can be *labeled*, i.e., come with a desired output, or *unlabeled*.
-- *Overfitting* is a risk of this approach. We want the resulting algorithm to also perform well on inputs outside the training set.
-- One way to mitigate overfitting is to give instructions like "try to write general passes" or "don't add a new pass, generalize an existing one". It's a form of *regularization*.
-- Asking agents to optimize a metric resembles *reinforcement learning*. For example, our circuit optimizer performed poorly on one metric simply because I hadn't told the agents to optimize it. A poor *reward* design!
-- More generally, *specification gaming* is a serious issue. We did catch an agent [exploit a weakness in the spec](https://github.com/powdr-labs/apc-optimizer/pull/147#issuecomment-5003090287).
-- And, of course, *we no longer understand the implementation*. We measure how well the software works in practice, but we also get a proof that it satisfies the formal specification. That is stronger than the usual machine-learning setting.
 
 ## What this means for software engineering
 
