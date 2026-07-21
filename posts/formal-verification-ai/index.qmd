@@ -1,6 +1,7 @@
 ---
 title: "A new software engineering paradigm"
 subtitle: "How formal verification might solve AI's review bottleneck"
+description: "Formal verification lets AI agents produce machine-checked implementations, eliminating code review as the bottleneck."
 date: 2026-07-21
 ---
 
@@ -8,7 +9,7 @@ date: 2026-07-21
 In this post, I'd like to collect some thoughts on what I believe is a new paradigm in software engineering. It is feasible today, and my colleagues and I have used it successfully over the past two weeks. In short, the paradigm combines **formal verification and AI**:
 
 - Humans specify what they want the software to do in a formal language such as [Lean](https://lean-lang.org/).
-- AI writes the software *and* a formal proof that it adheres to the specification. The proof is machine-checkable, eliminating the need for human review of the generated implementation for the properties covered by the specification.
+- AI writes the software *and* a formal proof that it adheres to the specification. The proof is machine-checkable, eliminating the need for human review of the generated implementation.
 
 ## AI by itself suffers from the review bottleneck
 
@@ -25,7 +26,6 @@ The formal verification + AI approach can eliminate human review of generated im
 The general framework is as follows:
 
 ![](formal-verification-ai.svg)
-
 
 - **Humans define the *hard constraints***: These are the required properties of the software, expressed as a formal specification. Usually, they capture some notion of correctness.
 - **Humans define the *optimization objectives***: Benchmarks measure what the code should optimize for. Obvious examples include runtime and resource usage, but the objectives can also include hard-to-formalize properties that can be tested experimentally.
@@ -78,7 +78,7 @@ theorem selectKthSmallest_correct : IsCorrect selectKthSmallest :=
   selectKthSmallest_correct_impl
 ```
 
-Finally, we'll add a synthetic benchmark to measure the runtime of the implementation. This is an optimization objective, and the agent will be asked to optimize it.
+Finally, we'll add a synthetic benchmark to measure the runtime of the implementation. This is an optimization objective.
 
 ```lean
 def randomInts (seed : Nat) (count : Nat) : List Int :=
@@ -118,7 +118,7 @@ This maps cleanly to the framework above: optimizer correctness is a hard constr
 - We check in a few relevant benchmarks. Those are real-world input circuits for which we care about optimizer performance. A benchmarking script measures both the quality of the optimizer and the runtime.
 - When a PR is opened, CI (1) applies a label if only a whitelisted set of files was touched (which excludes all of the specification and benchmarks), and (2) runs the benchmarks and posts the result into a comment.
 
-In practice, "reviewing" a generated implementation PR consists of checking for the label and skimming a comment like [this](https://github.com/powdr-labs/apc-optimizer/pull/120#issuecomment-4965408068). AI agents have written 100% of the optimizer implementation and its proofs with minimal guidance. We do not review the generated code at all. In fact, I barely know Lean.
+In practice, "reviewing" an AI-generated implementation PR consists of checking for the label and skimming a comment like [this](https://github.com/powdr-labs/apc-optimizer/pull/120#issuecomment-4965408068). AI agents have written 100% of the optimizer implementation and its proofs with minimal guidance. We do not review the generated code at all. In fact, I barely know Lean.
 
 **Results**: Circuit-size reduction is on par with our previous implementation; see [this comparison](https://github.com/powdr-labs/bench-results/tree/gh-pages/results/2026-07-20-0557-lean) across a suite of benchmarks. The agents were asked to optimize only a subset of these benchmarks, so the results on the others are evidence that the optimizer generalizes. Runtime is still slower than that of our Rust implementation, but it has not been a priority so far, and we are confident that it can be improved. Our slowest test case became more than three times faster in the last three days.
 
