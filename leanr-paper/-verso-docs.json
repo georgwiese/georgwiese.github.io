@@ -1,0 +1,205 @@
+{"99":
+ "<code>ApcOptimizer.SP1.Sp1BusType.byteLookup : ApcOptimizer.SP1.Sp1BusType</code><span class=\"sep\"></span><code class=\"docstring\">Byte lookup. Format `(op, a, b, c)`, where `op` selects the operation on bytes `b`, `c`:\n0 `AND` (`a = b & c`), 1 `OR`, 2 `XOR`, 3 `U8Range` (`a = 0`), 4 `LTU` (`a = [b &lt; c]`),\n5 `MSB` (`a = b &gt;&gt; 7`, `c = 0`), 6 `Range` (`a &lt; 2^b`, `c = 0`, `b ≤ 16`). </code>",
+ "98":
+ "<code>ApcOptimizer.SP1.Sp1BusType.pcLookup : ApcOptimizer.SP1.Sp1BusType</code><span class=\"sep\"></span><code class=\"docstring\">Program lookup: fetch the instruction at the current pc. Payload has 16 fields. </code>",
+ "97":
+ "<code>ApcOptimizer.SP1.Sp1BusType.memory : ApcOptimizer.SP1.Sp1BusType</code><span class=\"sep\"></span><code class=\"docstring\">To access a memory cell, instructions send the previous record and receive the new one.\nPayload: `(clk... (2 fields), address... (3 limbs), data... (4 × 16-bit limbs))`. </code>",
+ "96":
+ "<code>ApcOptimizer.SP1.Sp1BusType.executionBridge : ApcOptimizer.SP1.Sp1BusType</code><span class=\"sep\"></span><code class=\"docstring\">The CPU state (\"execution bridge\"): an instruction receives the current `(clk, pc)` and\nsends the next one. Payload: `(clk... (2 fields), pc... (3 fields))`. </code>",
+ "95":
+ "<code>ApcOptimizer.SP1.Sp1BusType : Type</code><span class=\"sep\"></span><code class=\"docstring\">The SP1 bus types that appear in the default bus map. </code>",
+ "94":
+ "<code>ApcOptimizer.OpenVM.defaultBusMap : ApcOptimizer.OpenVM.BusMap</code><span class=\"sep\"></span><code class=\"docstring\">The hard-coded default OpenVM bus map, mirroring powdr's `default_openvm_bus_map` </code>",
+ "93":
+ "<code>optParam ApcOptimizer.OpenVM.BusMap ApcOptimizer.OpenVM.defaultBusMap</code>",
+ "92":
+ "<code>ApcOptimizer.OpenVM.openVmBusSemantics (p : ℕ)\n  (busMap : ApcOptimizer.OpenVM.BusMap := ApcOptimizer.OpenVM.defaultBusMap) : BusSemantics p</code><span class=\"sep\"></span><code class=\"docstring\">The OpenVM bus semantics for a given bus map (default: the hard-coded default bus map). </code>",
+ "91":
+ "<code>ApcOptimizer.OpenVM.breaksInvariant {p : ℕ} (busMap : ApcOptimizer.OpenVM.BusMap) (msg : BusInteraction (ZMod p)) : Bool</code><span class=\"sep\"></span><code class=\"docstring\">Whether a message breaks an invariant on which soundness depends. </code>",
+ "90": "<code>BusInteraction (ZMod p)</code>",
+ "9":
+ "<code>Variable : Type</code><span class=\"sep\"></span><code class=\"docstring\">A circuit variable: a display `name` plus an optional powdr witness-column ID. </code>",
+ "89":
+ "<code>ApcOptimizer.OpenVM.BusMap : Type</code><span class=\"sep\"></span><code class=\"docstring\">A mapping from bus IDs to bus type. </code>",
+ "88": "<code>ApcOptimizer.OpenVM.BusMap</code>",
+ "87":
+ "<code>ApcOptimizer.OpenVM.violates {p : ℕ} (busMap : ApcOptimizer.OpenVM.BusMap) (msg : BusInteraction (ZMod p)) : Bool</code><span class=\"sep\"></span><code class=\"docstring\">Whether a message conflicts with the lookup table of the bus it is sent on. </code>",
+ "86":
+ "<code>ApcOptimizer.OpenVM.OpenVmBusType.tupleRangeChecker (size1 size2 : ℕ) : ApcOptimizer.OpenVM.OpenVmBusType</code><span class=\"sep\"></span><code class=\"docstring\">Check that a tuple of two values is in a certain range. Format: `(x, y)` where\n`x &lt; size1` and `y &lt; size2`. </code>",
+ "85":
+ "<code>ApcOptimizer.OpenVM.OpenVmBusType.bitwiseLookup : ApcOptimizer.OpenVM.OpenVmBusType</code><span class=\"sep\"></span><code class=\"docstring\">Check that a value is in a certain range. Format: `(x, y, z, op)` where `op` is either\n0 (range check) or 1 (xor). The bus checks that `x` and `y` are bytes, and either\n`op = 0 ∧ z = 0` (range check) or `op = 1 ∧ z = x ^ y` (xor). </code>",
+ "84":
+ "<code>ApcOptimizer.OpenVM.OpenVmBusType.variableRangeChecker : ApcOptimizer.OpenVM.OpenVmBusType</code><span class=\"sep\"></span><code class=\"docstring\">Check that a value is in a certain range. Format: `(value, bits)` </code>",
+ "83":
+ "<code>ApcOptimizer.OpenVM.OpenVmBusType.pcLookup : ApcOptimizer.OpenVM.OpenVmBusType</code><span class=\"sep\"></span><code class=\"docstring\">Lookup to get the instruction flags from the current pc. Format: `(pc, flags...)` </code>",
+ "82": "<code>?m.5</code>",
+ "81": "<code>?m.4</code>",
+ "80": "<code>?m.3</code>",
+ "8": "<code>Variable</code>",
+ "79":
+ "<code>ApcOptimizer.OpenVM.OpenVmBusType.memory : ApcOptimizer.OpenVM.OpenVmBusType</code><span class=\"sep\"></span><code class=\"docstring\">To access a memory cell, instructions should:\n1. Receive a `(address_space, pointer, data... (4 bytes), prev_timestamp)` tuple\n2. Send a `(address_space, pointer, data... (4 bytes), current_timestamp)` tuple. </code>",
+ "78": "<code>?m.2</code>",
+ "77": "<code>?m.1</code>",
+ "76":
+ "<code>ApcOptimizer.OpenVM.OpenVmBusType.executionBridge : ApcOptimizer.OpenVM.OpenVmBusType</code><span class=\"sep\"></span><code class=\"docstring\">A instruction should receive a `(pc, timestamp)` and send updated values to the bus. </code>",
+ "75":
+ "<code>ApcOptimizer.OpenVM.OpenVmBusType : Type</code><span class=\"sep\"></span><code class=\"docstring\">The OpenVM bus types that appear in the default bus map. </code>",
+ "74":
+ "<code>MemoryBusShape.setNewMult {p : ℕ} (shape : MemoryBusShape) : ZMod p</code><span class=\"sep\"></span><code class=\"docstring\">The multiplicity a `setNew` carries on this bus (`1` for `receiveThenSend`, `-1` for\n`sendThenReceive`); the `getPrevious` reading it back carries the negation. </code>",
+ "73": "<code>List (BusInteraction (ZMod p))</code>",
+ "72": "<code>MemoryBusShape</code>",
+ "71":
+ "<code>admissibleMemoryBus {p : ℕ} (shape : MemoryBusShape) (L : List (BusInteraction (ZMod p))) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Given an ordered list of memory bus interaction messages *on the same bus*, decide whether\nit follows the memory bus discipline: after a `setNew` to a given address (multiplicity\n`shape.setNewMult`), the next `getPrevious` from the same address (multiplicity\n`-shape.setNewMult`) observes the same payload, with no intervening active messages to the same\naddress. </code>",
+ "70":
+ "<code>MemoryBusDirection</code><span class=\"sep\"></span><code class=\"docstring\">Which of the matched consecutive `setNew`/`getPrevious` pair is the send and which the\nreceive (see `MemoryBusDirection`). </code>",
+ "7": "<code>Expression.var {p : ℕ} (x : Variable) : Expression p</code>",
+ "69":
+ "<code>List ℕ</code><span class=\"sep\"></span><code class=\"docstring\">Payload positions forming the access key (e.g. OpenVM's two-limb address).\nCan be empty for a single global cell. </code>",
+ "68":
+ "<code>MemoryBusShape.mk (addressFields : List ℕ) (direction : MemoryBusDirection) : MemoryBusShape</code>",
+ "67":
+ "<code>MemoryBusShape : Type</code><span class=\"sep\"></span><code class=\"docstring\">A description of a memory bus interaction. </code>",
+ "66":
+ "<code>MemoryBusDirection.sendThenReceive : MemoryBusDirection</code><span class=\"sep\"></span><code class=\"docstring\">`getPrevious` sends (`1`), `setNew` receives (`-1`) — so `setNewMult = -1`. This is SP1's\nmemory convention (it sends the previous record and receives the new one). </code>",
+ "65":
+ "<code>MemoryBusDirection.receiveThenSend : MemoryBusDirection</code><span class=\"sep\"></span><code class=\"docstring\">`getPrevious` receives (`-1`), `setNew` sends (`1`) — so `setNewMult = 1`. This is OpenVM's\nmemory convention (send the new record, receive the previous), and every VM's execution\nbridge, which sends the next CPU state and receives the current one. </code>",
+ "64": "<code>ℤ</code>",
+ "63":
+ "<code>MemoryBusDirection : Type</code><span class=\"sep\"></span><code class=\"docstring\">A memory access is a `getPrevious` (reading the cell's current value) followed by a `setNew`\n(committing its next value); the two carry opposite multiplicities. The variant is named for\nthat order — `⟨getPrevious's operation⟩Then⟨setNew's operation⟩` — which fixes which is the\n*send* (multiplicity `1`) and which the *receive* (`-1`). </code>",
+ "62": "<code>Optimizer (p : ℕ) : Type</code>",
+ "61": "<code>Optimizer p</code>",
+ "60":
+ "<code>Optimizer.isCorrect {p : ℕ} (optimizer : Optimizer p) (busSemantics : BusSemantics p) (b : DegreeBound) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">An optimizer is correct if, for every input constraint system, replacing it with the optimized\nsystem is both sound and complete, and the optimizer respects the degree bound `b`. </code>",
+ "6":
+ "<code>ZMod : ℕ → Type</code><span class=\"sep\"></span><code class=\"docstring\">The integers modulo `n : ℕ`. </code>",
+ "59":
+ "<code>Prod.{u, v} (α : Type u) (β : Type v) : Type (max u v)</code><span class=\"sep\"></span><code class=\"docstring\">The product type, usually written `α × β`. Product types are also called pair or tuple types.\nElements of this type are pairs in which the first element is an `α` and the second element is a\n`β`.\n\nProducts nest to the right, so `(x, y, z) : α × β × γ` is equivalent to `(x, (y, z)) : α × (β × γ)`.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `×` in identifiers is `Prod`.</code>",
+ "58": "<code>ConstraintSystem p → ConstraintSystem p × Derivations p</code>",
+ "57":
+ "<code>optimizerRespectsDegreeBound {p : ℕ} (b : DegreeBound)\n  (optimizer : ConstraintSystem p → ConstraintSystem p × Derivations p) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Whether an optimizer respects a degree bound: a within-bound input always yields a\nwithin-bound output. </code>",
+ "56":
+ "<code>DegreeBound : Type</code><span class=\"sep\"></span><code class=\"docstring\">Per-zkVM bound on the multiplicative degree of a circuit's expressions. </code>",
+ "55": "<code>DegreeBound</code>",
+ "54":
+ "<code>ConstraintSystem.withinDegree {p : ℕ} (s : ConstraintSystem p) (b : DegreeBound) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Whether a constraint system stays within a degree bound. </code>",
+ "53":
+ "<code>ConstraintSystem.isCompleteReplacementOf {p : ℕ} (optimizedCS originalCS : ConstraintSystem p)\n  (busSemantics : BusSemantics p) (ds : Derivations p) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Whether an optimized constraint system is a complete replacement for an original one. Assuming\nevery input variable carries a powdr ID, then for any admissible satisfying assignment of the\noriginal constraint system, there is a computable assignment of the optimized system that is\nitself satisfying and admissible, with equivalent side effects. </code>",
+ "52": "<code>Derivations p</code>",
+ "51":
+ "<code>Derivations.witgen {p : ℕ} (ds : Derivations p) (inputEnv : Variable → ZMod p) : Variable → ZMod p</code><span class=\"sep\"></span><code class=\"docstring\">Witness generation: reconstruct an output assignment from an input assignment. Every powdr-ID\n(input) variable passes through unchanged; every other variable is computed by the method `ds`\nrecords for it, read from the input variables. This is what powdr runs to fill the optimized\ncircuit's variables from an input trace. </code>",
+ "50":
+ "<code>Derivations (p : ℕ) : Type</code><span class=\"sep\"></span><code class=\"docstring\">A list of derived variables paired with how to compute each, in order — the extra output of\nthe optimizer, consumed by witness generation. </code>",
+ "5": "<code>ZMod p</code>",
+ "49": "<code>ComputationMethod p</code>",
+ "48":
+ "<code>ComputationMethod.ifEqZero {p : ℕ} (cond : Expression p) (thenM elseM : ComputationMethod p) : ComputationMethod p</code>",
+ "47":
+ "<code>ComputationMethod.quotientOrZero {p : ℕ} (num den : Expression p) : ComputationMethod p</code>",
+ "46":
+ "<code>ComputationMethod.const {p : ℕ} (c : ZMod p) : ComputationMethod p</code>",
+ "45":
+ "<code>cond.{u} {α : Sort u} (c : Bool) (x y : α) : α</code><span class=\"sep\"></span><code class=\"docstring\">The conditional function.\n\n`cond c x y` is the same as `if c then x else y`, but optimized for a Boolean condition rather than\na decidable proposition. It can also be written using the notation `bif c then x else y`.\n\nJust like `ite`, `cond` is declared `@[macro_inline]`, which causes applications of `cond` to be\nunfolded. As a result, `x` and `y` are not evaluated at runtime until one of them is selected, and\nonly the selected branch is evaluated.\n</code>",
+ "44":
+ "<code>ComputationMethod (p : ℕ) : Type</code><span class=\"sep\"></span><code class=\"docstring\">A method for computing a *derived* variable's value from other variables, mirroring powdr's\n`ComputationMethod`. For newly introduced variables, this is interpreted by powdr's witness\ngenerator.\n`quotientOrZero num den` is `num / den` in the field, or `0` when\n`den = 0`; `ifEqZero cond thenM elseM` picks `thenM` when `cond` evaluates to `0`, else `elseM`. </code>",
+ "43":
+ "<code>ConstraintSystem.isSoundReplacementOf {p : ℕ} (optimizedCS originalCS : ConstraintSystem p)\n  (busSemantics : BusSemantics p) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Whether an optimized constraint system is a sound replacement for an original constraint system.\nInformally, for any satisfying assignment of the optimized system, there exists a corresponding\nsatisfying assignment of the original system *with equivalent side effects*. Also, the optimized\nsystem must maintain all invariants guaranteed by the original system. </code>",
+ "42":
+ "<code>ConstraintSystem.admissible {p : ℕ} (s : ConstraintSystem p) (busSemantics : BusSemantics p) (env : Variable → ZMod p) :\n  Prop</code><span class=\"sep\"></span><code class=\"docstring\">Whether a given assignment is admissible under the bus semantics. </code>",
+ "41":
+ "<code>ConstraintSystem.satisfies {p : ℕ} (s : ConstraintSystem p) (busSemantics : BusSemantics p) (env : Variable → ZMod p) :\n  Prop</code><span class=\"sep\"></span><code class=\"docstring\">Whether a constraint system is satisfied under a given environment and bus semantics,\ni.e., whether it satisfies all algebraic constraints and does not violate any bus constraints. </code>",
+ "40": "<code>?m.19</code>",
+ "4": "<code>Expression.const {p : ℕ} (n : ZMod p) : Expression p</code>",
+ "39": "<code>List (BusInteraction (ZMod p)) → Prop</code>",
+ "38":
+ "<code class=\"docstring\">The universe of propositions. `Prop ≡ Sort 0`.\n\nEvery proposition is propositionally equal to either `True` or `False`. </code>",
+ "37":
+ "<code>List (BusInteraction (ZMod p)) → Prop</code><span class=\"sep\"></span><code class=\"docstring\">A property on *stateful* bus messages with nonzero multiplicity. Completeness is only\nrequired for assignments whose stateful messages are `admissible`.\nOne useful way to use this is to describe the semantics of memory buses, see\n``ApcOptimizer/MemoryBus.lean``. </code>",
+ "36":
+ "<code>BusInteraction (ZMod p) → Bool</code><span class=\"sep\"></span><code class=\"docstring\">Whether sending this bus interaction message breaks an invariant on which soundness\nof the system depends.\nFor example, a memory bus might have the invariant that all sent values must be in\na certain range. </code>",
+ "35":
+ "<code>BusInteraction (ZMod p) → Bool</code><span class=\"sep\"></span><code class=\"docstring\">Whether sending this bus interaction message violates a constraint in *another* chip.\nAn example of this is sending a message that conflicts with a lookup table entry. </code>",
+ "34":
+ "<code>Bool : Type</code><span class=\"sep\"></span><code class=\"docstring\">The Boolean values, `true` and `false`.\n\nLogically speaking, this is equivalent to `Prop` (the type of propositions). The distinction is\npublic important for programming: both propositions and their proofs are erased in the code generator,\nwhile `Bool` corresponds to the Boolean type in most programming languages and carries precisely one\nbit of run-time information.\n</code>",
+ "33":
+ "<code>ℕ → Bool</code><span class=\"sep\"></span><code class=\"docstring\">Whether the bus of the given ID changes the state of the VM.\nStateless bus interactions are typically lookups. </code>",
+ "32":
+ "<code>BusSemantics.mk {p : ℕ} (isStateful : ℕ → Bool) (violatesConstraint breaksInvariant : BusInteraction (ZMod p) → Bool)\n  (admissible : List (BusInteraction (ZMod p)) → Prop) : BusSemantics p</code>",
+ "31":
+ "<code>BusState (p : ℕ) : Type</code><span class=\"sep\"></span><code class=\"docstring\">The effect on the stateful buses: the messages sent, each with a multiplicity. </code>",
+ "30":
+ "<code>BusSemantics (p : ℕ) : Type</code><span class=\"sep\"></span><code class=\"docstring\">The bus semantics of the zkVM. </code>",
+ "3":
+ "<code class=\"docstring\">A type universe. `Type ≡ Type 0`, `Type u ≡ Sort (u + 1)`. </code>",
+ "29": "<code>BusSemantics p</code>",
+ "28": "<code>ConstraintSystem p</code>",
+ "27":
+ "<code>ConstraintSystem.sideEffects {p : ℕ} (cs : ConstraintSystem p) (busSemantics : BusSemantics p)\n  (env : Variable → ZMod p) : BusState p</code><span class=\"sep\"></span><code class=\"docstring\">The side effects of a constraint system under a given environment and bus semantics.\nThe side effects are the tuples sent to the *stateful* buses.</code>",
+ "26": "<code>List (BusInteraction (Expression p))</code>",
+ "25": "<code>List (Expression p)</code>",
+ "24":
+ "<code>ConstraintSystem.mk {p : ℕ} (algebraicConstraints : List (Expression p))\n  (busInteractions : List (BusInteraction (Expression p))) : ConstraintSystem p</code>",
+ "23":
+ "<code>ConstraintSystem (p : ℕ) : Type</code><span class=\"sep\"></span><code class=\"docstring\">A constraint system representing a single zkVM chip. </code>",
+ "22":
+ "<code>List.{u} (α : Type u) : Type u</code><span class=\"sep\"></span><code class=\"docstring\">Linked lists: ordered lists, in which each element has a reference to the next element.\n\nMost operations on linked lists take time proportional to the length of the list, because each\nelement must be traversed to find the next element.\n\n`List α` is isomorphic to `Array α`, but they are useful for different things:\n* `List α` is easier for reasoning, and `Array α` is modeled as a wrapper around `List α`.\n* `List α` works well as a persistent data structure, when many copies of the tail are shared. When\n  the value is not shared, `Array α` will have better performance because it can do destructive\n  updates.\n</code>",
+ "21": "<code>List α</code>",
+ "20": "<code>α</code>",
+ "2":
+ "<code>Nat : Type</code><span class=\"sep\"></span><code class=\"docstring\">The natural numbers, starting at zero.\n\nThis type is special-cased by both the kernel and the compiler, and overridden with an efficient\nimplementation. Both use a fast arbitrary-precision arithmetic library (usually\n[GMP](https://gmplib.org/)); at runtime, `Nat` values that are sufficiently small are unboxed.\n</code>",
+ "19": "<code>ℕ</code>",
+ "18":
+ "<code>BusInteraction.mk {α : Type} (busId : ℕ) (multiplicity : α) (payload : List α) : BusInteraction α</code>",
+ "17": "<code>Type</code>",
+ "16":
+ "<code>BusInteraction (α : Type) : Type</code><span class=\"sep\"></span><code class=\"docstring\">A bus interaction. Typically, α is\n- an expression (=&gt; symbolic bus interaction), or\n- a field element (=&gt; bus interaction message). </code>",
+ "15":
+ "<code>Expression.degree {p : ℕ} : Expression p → ℕ</code><span class=\"sep\"></span><code class=\"docstring\">The multiplicative degree of an expression. </code>",
+ "14": "<code>Variable → ZMod p</code>",
+ "13":
+ "<code>Expression.eval {p : ℕ} (e : Expression p) (env : Variable → ZMod p) : ZMod p</code><span class=\"sep\"></span><code class=\"docstring\">Evaluate an expression under an assignment `env` of variables to field elements. </code>",
+ "12":
+ "<code>Expression.mul {p : ℕ} (e1 e2 : Expression p) : Expression p</code>",
+ "119":
+ "<code>ApcOptimizer.SP1.koalaBear : ℕ</code><span class=\"sep\"></span><code class=\"docstring\">The KoalaBear field modulus, `2^31 - 2^24 + 1` — the field all powdr SP1 exports use. </code>",
+ "118":
+ "<code>ApcOptimizer.SP1.sp1Optimizer (busMap : ApcOptimizer.SP1.BusMap := ApcOptimizer.SP1.defaultBusMap)\n  (b : DegreeBound := ApcOptimizer.SP1.defaultDegreeBound) :\n  ConstraintSystem ApcOptimizer.SP1.koalaBear →\n    ConstraintSystem ApcOptimizer.SP1.koalaBear × Derivations ApcOptimizer.SP1.koalaBear</code><span class=\"sep\"></span><code class=\"docstring\">Optimizer specialized for the SP1 semantics. </code>",
+ "117":
+ "<code>ApcOptimizer.SP1.sp1Optimizer_maintainsCorrectness (busMap : ApcOptimizer.SP1.BusMap) (b : DegreeBound) :\n  Optimizer.isCorrect (ApcOptimizer.SP1.sp1Optimizer busMap b)\n    (ApcOptimizer.SP1.sp1BusSemantics ApcOptimizer.SP1.koalaBear busMap) b</code>",
+ "116":
+ "<code>ApcOptimizer.OpenVM.babyBear : ℕ</code><span class=\"sep\"></span><code class=\"docstring\">The BabyBear field modulus, `2^31 - 2^27 + 1` — the field all powdr OpenVM exports use. </code>",
+ "115":
+ "<code>ApcOptimizer.OpenVM.openVmOptimizer (busMap : ApcOptimizer.OpenVM.BusMap := ApcOptimizer.OpenVM.defaultBusMap)\n  (b : DegreeBound := ApcOptimizer.OpenVM.defaultDegreeBound) :\n  ConstraintSystem ApcOptimizer.OpenVM.babyBear →\n    ConstraintSystem ApcOptimizer.OpenVM.babyBear × Derivations ApcOptimizer.OpenVM.babyBear</code><span class=\"sep\"></span><code class=\"docstring\">Optimizer specialized for the OpenVM semantics. </code>",
+ "114":
+ "<code>ApcOptimizer.OpenVM.openVmOptimizer_maintainsCorrectness (busMap : ApcOptimizer.OpenVM.BusMap) (b : DegreeBound) :\n  Optimizer.isCorrect (ApcOptimizer.OpenVM.openVmOptimizer busMap b)\n    (ApcOptimizer.OpenVM.openVmBusSemantics ApcOptimizer.OpenVM.babyBear busMap) b</code>",
+ "113":
+ "<code>simpleOptimizer {p : ℕ} (bs : BusSemantics p) (b : DegreeBound) :\n  ConstraintSystem p → ConstraintSystem p × Derivations p</code><span class=\"sep\"></span><code class=\"docstring\">Optimizer which does not use any bus facts. Works with any VM, but is less effective. Returns\nthe optimized system together with the `Derivations` for its newly-introduced columns. </code>",
+ "112":
+ "<code>simpleOptimizer_maintainsCorrectness {p : ℕ} (bs : BusSemantics p) (b : DegreeBound) :\n  Optimizer.isCorrect (simpleOptimizer bs b) bs b</code>",
+ "111":
+ "<code>optimizerWithBusFacts {p : ℕ} {bs : BusSemantics p} (b : DegreeBound) (facts : BusFacts p bs)\n  (cs : ConstraintSystem p) : ConstraintSystem p × Derivations p</code><span class=\"sep\"></span><code class=\"docstring\">The fact-aware circuit optimizer: given proven `BusFacts` (which fixes the implicit `bs`), run\nthe pipeline and return the output system with the `Derivations` for its new variables. </code>",
+ "110":
+ "<code>BusFacts (p : ℕ) (bs : BusSemantics p) : Type 1</code><span class=\"sep\"></span><code class=\"docstring\">Proven, pass-consumable knowledge about the bus semantics `bs`. </code>",
+ "11": "<code>Expression p</code>",
+ "109": "<code>BusFacts p bs</code>",
+ "108":
+ "<code>optimizerWithBusFacts_maintainsCorrectness {p : ℕ} (bs : BusSemantics p) (b : DegreeBound) (facts : BusFacts p bs) :\n  Optimizer.isCorrect (optimizerWithBusFacts b facts) bs b</code>",
+ "107":
+ "<code>ApcOptimizer.SP1.defaultBusMap : ApcOptimizer.SP1.BusMap</code><span class=\"sep\"></span><code class=\"docstring\">The hard-coded default SP1 bus map, mirroring powdr's `sp1_bus_map`. </code>",
+ "106":
+ "<code>optParam ApcOptimizer.SP1.BusMap ApcOptimizer.SP1.defaultBusMap</code>",
+ "105":
+ "<code>ApcOptimizer.SP1.sp1BusSemantics (p : ℕ) (busMap : ApcOptimizer.SP1.BusMap := ApcOptimizer.SP1.defaultBusMap) :\n  BusSemantics p</code><span class=\"sep\"></span><code class=\"docstring\">The SP1 bus semantics for a given bus map (default: the hard-coded default bus map). </code>",
+ "104":
+ "<code>ApcOptimizer.SP1.BusMap : Type</code><span class=\"sep\"></span><code class=\"docstring\">A mapping from bus IDs to bus type. </code>",
+ "103": "<code>ApcOptimizer.SP1.BusMap</code>",
+ "102":
+ "<code>ApcOptimizer.SP1.violates {p : ℕ} (busMap : ApcOptimizer.SP1.BusMap) (msg : BusInteraction (ZMod p)) : Bool</code><span class=\"sep\"></span><code class=\"docstring\">Whether a message conflicts with the lookup table of the bus it is sent on. </code>",
+ "101":
+ "<code>ApcOptimizer.SP1.Sp1BusType.pageProt : ApcOptimizer.SP1.Sp1BusType</code><span class=\"sep\"></span><code class=\"docstring\">Page-protection lookup. Payload has 6 fields. </code>",
+ "100":
+ "<code>ApcOptimizer.SP1.Sp1BusType.instructionFetch : ApcOptimizer.SP1.Sp1BusType</code><span class=\"sep\"></span><code class=\"docstring\">Instruction-fetch lookup (the untrusted instruction table). Payload has 22 fields. </code>",
+ "10":
+ "<code>Expression.add {p : ℕ} (e1 e2 : Expression p) : Expression p</code>",
+ "1": "<code>ℕ</code>",
+ "0":
+ "<code>Expression (p : ℕ) : Type</code><span class=\"sep\"></span><code class=\"docstring\">An arithmetic expression over structured variables and field constants. </code>"}

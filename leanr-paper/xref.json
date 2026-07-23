@@ -1,0 +1,464 @@
+{"Verso.Genre.Manual.section":
+ {"title": "Sections or chapters of the manual",
+  "description": null,
+  "contents":
+  {"apc-optimizer___-A-Verified-Constraint-System-Optimizer--VM-instantiations--SP1":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--VM-instantiations--SP1",
+     "data":
+     {"title": "SP1",
+      "shortTitle": null,
+      "sectionNum": "5.2.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "VM instantiations", "shortTitle": null, "number": "5"},
+       {"title": "SP1", "shortTitle": null, "number": "2"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--VM-instantiations--OpenVM":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--VM-instantiations--OpenVM",
+     "data":
+     {"title": "OpenVM",
+      "shortTitle": null,
+      "sectionNum": "5.1.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "VM instantiations", "shortTitle": null, "number": "5"},
+       {"title": "OpenVM", "shortTitle": null, "number": "1"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--VM-instantiations":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--VM-instantiations",
+     "data":
+     {"title": "VM instantiations",
+      "shortTitle": null,
+      "sectionNum": "5.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "VM instantiations", "shortTitle": null, "number": "5"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--Trust-boundary--Assumptions":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--Trust-boundary--Assumptions",
+     "data":
+     {"title": "Assumptions",
+      "shortTitle": null,
+      "sectionNum": "7.1.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "Trust boundary", "shortTitle": null, "number": "7"},
+       {"title": "Assumptions", "shortTitle": null, "number": "1"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--Trust-boundary":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--Trust-boundary",
+     "data":
+     {"title": "Trust boundary",
+      "shortTitle": null,
+      "sectionNum": "7.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "Trust boundary", "shortTitle": null, "number": "7"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-theorems":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-theorems",
+     "data":
+     {"title": "The theorems",
+      "shortTitle": null,
+      "sectionNum": "6.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "The theorems", "shortTitle": null, "number": "6"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-memory-discipline":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-memory-discipline",
+     "data":
+     {"title": "The memory discipline",
+      "shortTitle": null,
+      "sectionNum": "4.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "The memory discipline", "shortTitle": null, "number": "4"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--What-a-circuit-does":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--What-a-circuit-does",
+     "data":
+     {"title": "What a circuit does",
+      "shortTitle": null,
+      "sectionNum": "3.1.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "The correctness relation", "shortTitle": null, "number": "3"},
+       {"title": "What a circuit does", "shortTitle": null, "number": "1"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--The-degree-bound":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--The-degree-bound",
+     "data":
+     {"title": "The degree bound",
+      "shortTitle": null,
+      "sectionNum": "3.4.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "The correctness relation", "shortTitle": null, "number": "3"},
+       {"title": "The degree bound", "shortTitle": null, "number": "4"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--Soundness":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--Soundness",
+     "data":
+     {"title": "Soundness",
+      "shortTitle": null,
+      "sectionNum": "3.2.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "The correctness relation", "shortTitle": null, "number": "3"},
+       {"title": "Soundness", "shortTitle": null, "number": "2"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--Correctness":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--Correctness",
+     "data":
+     {"title": "Correctness",
+      "shortTitle": null,
+      "sectionNum": "3.5.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "The correctness relation", "shortTitle": null, "number": "3"},
+       {"title": "Correctness", "shortTitle": null, "number": "5"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--Completeness":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation--Completeness",
+     "data":
+     {"title": "Completeness",
+      "shortTitle": null,
+      "sectionNum": "3.3.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "The correctness relation", "shortTitle": null, "number": "3"},
+       {"title": "Completeness", "shortTitle": null, "number": "3"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--The-correctness-relation",
+     "data":
+     {"title": "The correctness relation",
+      "shortTitle": null,
+      "sectionNum": "3.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "The correctness relation",
+        "shortTitle": null,
+        "number": "3"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--Circuits":
+   [{"id": "apc-optimizer___-A-Verified-Constraint-System-Optimizer--Circuits",
+     "data":
+     {"title": "Circuits",
+      "shortTitle": null,
+      "sectionNum": "1.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "Circuits", "shortTitle": null, "number": "1"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer--Bus-semantics":
+   [{"id":
+     "apc-optimizer___-A-Verified-Constraint-System-Optimizer--Bus-semantics",
+     "data":
+     {"title": "Bus semantics",
+      "shortTitle": null,
+      "sectionNum": "2.",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null},
+       {"title": "Bus semantics", "shortTitle": null, "number": "2"}]},
+     "address": "/"}],
+   "apc-optimizer___-A-Verified-Constraint-System-Optimizer":
+   [{"id": "apc-optimizer___-A-Verified-Constraint-System-Optimizer",
+     "data":
+     {"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+      "shortTitle": "apc-optimizer",
+      "sectionNum": "",
+      "context":
+      [{"title": "apc-optimizer: A Verified Constraint-System Optimizer",
+        "shortTitle": "apc-optimizer",
+        "number": null}]},
+     "address": "/"}]}},
+ "Verso.Genre.Manual.doc.tech":
+ {"title": "Terminology",
+  "description": "Definitions of technical terms",
+  "contents":
+  {"side effect":
+   [{"id": "--tech-term-side-effects",
+     "data": {"term": "side effects"},
+     "address": "/"}],
+   "satisfied":
+   [{"id": "--tech-term-satisfied",
+     "data": {"term": "satisfied"},
+     "address": "/"}],
+   "expression":
+   [{"id": "--tech-term-expression",
+     "data": {"term": "expression"},
+     "address": "/"}],
+   "environment":
+   [{"id": "--tech-term-environment",
+     "data": {"term": "environment"},
+     "address": "/"}],
+   "derivation":
+   [{"id": "--tech-term-derivations",
+     "data": {"term": "derivations"},
+     "address": "/"}],
+   "degree":
+   [{"id": "--tech-term-degree", "data": {"term": "degree"}, "address": "/"}],
+   "correct":
+   [{"id": "--tech-term-correct", "data": {"term": "correct"}, "address": "/"}],
+   "constraint system":
+   [{"id": "--tech-term-constraint-system",
+     "data": {"term": "constraint system"},
+     "address": "/"}],
+   "bus semantic":
+   [{"id": "--tech-term-bus-semantics",
+     "data": {"term": "bus semantics"},
+     "address": "/"}],
+   "bus interaction":
+   [{"id": "--tech-term-bus-interaction",
+     "data": {"term": "bus interaction"},
+     "address": "/"}],
+   "admissible":
+   [{"id": "--tech-term-admissible",
+     "data": {"term": "admissible"},
+     "address": "/"}]}},
+ "Verso.Genre.Manual.doc.tactic.conv":
+ {"title": "Conversion Tactics",
+  "description": "Tactics for performing targeted rewriting of subterms",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.tactic":
+ {"title": "Tactic Documentation",
+  "description": "Detailed descriptions of tactics",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.suggestion":
+ {"title": "Lean constant suggestions",
+  "description": "Search suggestions for Lean constants",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.option":
+ {"title": "Compiler options", "description": null, "contents": {}},
+ "Verso.Genre.Manual.doc":
+ {"title": "Lean constant reference",
+  "description": "Documentation for Lean constants",
+  "contents":
+  {"simpleOptimizer_maintainsCorrectness":
+   [{"id": "simpleOptimizer_maintainsCorrectness",
+     "data": null,
+     "address": "/"}],
+   "optimizerWithBusFacts_maintainsCorrectness":
+   [{"id": "optimizerWithBusFacts_maintainsCorrectness",
+     "data": null,
+     "address": "/"}],
+   "optimizerRespectsDegreeBound":
+   [{"id": "optimizerRespectsDegreeBound", "data": null, "address": "/"}],
+   "admissibleMemoryBus":
+   [{"id": "admissibleMemoryBus", "data": null, "address": "/"}],
+   "Optimizer.isCorrect":
+   [{"id": "Optimizer___isCorrect", "data": null, "address": "/"}],
+   "MemoryBusShape.mk":
+   [{"id": "MemoryBusShape___mk", "data": null, "address": "/"}],
+   "MemoryBusShape.direction":
+   [{"id": "MemoryBusShape___mk", "data": null, "address": "/"}],
+   "MemoryBusShape.addressFields":
+   [{"id": "MemoryBusShape___mk", "data": null, "address": "/"}],
+   "MemoryBusShape":
+   [{"id": "MemoryBusShape___mk", "data": null, "address": "/"}],
+   "MemoryBusDirection.sendThenReceive":
+   [{"id": "MemoryBusDirection___receiveThenSend",
+     "data": null,
+     "address": "/"}],
+   "MemoryBusDirection.receiveThenSend":
+   [{"id": "MemoryBusDirection___receiveThenSend",
+     "data": null,
+     "address": "/"}],
+   "MemoryBusDirection":
+   [{"id": "MemoryBusDirection___receiveThenSend",
+     "data": null,
+     "address": "/"}],
+   "Expression.var":
+   [{"id": "Expression___const", "data": null, "address": "/"}],
+   "Expression.mul":
+   [{"id": "Expression___const", "data": null, "address": "/"}],
+   "Expression.eval":
+   [{"id": "Expression___eval", "data": null, "address": "/"}],
+   "Expression.degree":
+   [{"id": "Expression___degree", "data": null, "address": "/"}],
+   "Expression.const":
+   [{"id": "Expression___const", "data": null, "address": "/"}],
+   "Expression.add":
+   [{"id": "Expression___const", "data": null, "address": "/"}],
+   "Expression": [{"id": "Expression___const", "data": null, "address": "/"}],
+   "Derivations.witgen":
+   [{"id": "Derivations___witgen", "data": null, "address": "/"}],
+   "Derivations": [{"id": "Derivations", "data": null, "address": "/"}],
+   "ConstraintSystem.withinDegree":
+   [{"id": "ConstraintSystem___withinDegree", "data": null, "address": "/"}],
+   "ConstraintSystem.sideEffects":
+   [{"id": "ConstraintSystem___sideEffects", "data": null, "address": "/"}],
+   "ConstraintSystem.satisfies":
+   [{"id": "ConstraintSystem___satisfies", "data": null, "address": "/"}],
+   "ConstraintSystem.mk":
+   [{"id": "ConstraintSystem___mk", "data": null, "address": "/"}],
+   "ConstraintSystem.isSoundReplacementOf":
+   [{"id": "ConstraintSystem___isSoundReplacementOf",
+     "data": null,
+     "address": "/"}],
+   "ConstraintSystem.isCompleteReplacementOf":
+   [{"id": "ConstraintSystem___isCompleteReplacementOf",
+     "data": null,
+     "address": "/"}],
+   "ConstraintSystem.busInteractions":
+   [{"id": "ConstraintSystem___mk", "data": null, "address": "/"}],
+   "ConstraintSystem.algebraicConstraints":
+   [{"id": "ConstraintSystem___mk", "data": null, "address": "/"}],
+   "ConstraintSystem.admissible":
+   [{"id": "ConstraintSystem___admissible", "data": null, "address": "/"}],
+   "ConstraintSystem":
+   [{"id": "ConstraintSystem___mk", "data": null, "address": "/"}],
+   "ComputationMethod.quotientOrZero":
+   [{"id": "ComputationMethod___const", "data": null, "address": "/"}],
+   "ComputationMethod.ifEqZero":
+   [{"id": "ComputationMethod___const", "data": null, "address": "/"}],
+   "ComputationMethod.const":
+   [{"id": "ComputationMethod___const", "data": null, "address": "/"}],
+   "ComputationMethod":
+   [{"id": "ComputationMethod___const", "data": null, "address": "/"}],
+   "BusSemantics.violatesConstraint":
+   [{"id": "BusSemantics___mk", "data": null, "address": "/"}],
+   "BusSemantics.mk":
+   [{"id": "BusSemantics___mk", "data": null, "address": "/"}],
+   "BusSemantics.isStateful":
+   [{"id": "BusSemantics___mk", "data": null, "address": "/"}],
+   "BusSemantics.breaksInvariant":
+   [{"id": "BusSemantics___mk", "data": null, "address": "/"}],
+   "BusSemantics.admissible":
+   [{"id": "BusSemantics___mk", "data": null, "address": "/"}],
+   "BusSemantics": [{"id": "BusSemantics___mk", "data": null, "address": "/"}],
+   "BusInteraction.payload":
+   [{"id": "BusInteraction___mk", "data": null, "address": "/"}],
+   "BusInteraction.multiplicity":
+   [{"id": "BusInteraction___mk", "data": null, "address": "/"}],
+   "BusInteraction.mk":
+   [{"id": "BusInteraction___mk", "data": null, "address": "/"}],
+   "BusInteraction.busId":
+   [{"id": "BusInteraction___mk", "data": null, "address": "/"}],
+   "BusInteraction":
+   [{"id": "BusInteraction___mk", "data": null, "address": "/"}],
+   "ApcOptimizer.SP1.violates":
+   [{"id": "ApcOptimizer___SP1___violates", "data": null, "address": "/"}],
+   "ApcOptimizer.SP1.sp1Optimizer_maintainsCorrectness":
+   [{"id": "ApcOptimizer___SP1___sp1Optimizer_maintainsCorrectness",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.SP1.sp1BusSemantics":
+   [{"id": "ApcOptimizer___SP1___sp1BusSemantics",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.SP1.Sp1BusType.pcLookup":
+   [{"id": "ApcOptimizer___SP1___Sp1BusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.SP1.Sp1BusType.pageProt":
+   [{"id": "ApcOptimizer___SP1___Sp1BusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.SP1.Sp1BusType.memory":
+   [{"id": "ApcOptimizer___SP1___Sp1BusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.SP1.Sp1BusType.instructionFetch":
+   [{"id": "ApcOptimizer___SP1___Sp1BusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.SP1.Sp1BusType.executionBridge":
+   [{"id": "ApcOptimizer___SP1___Sp1BusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.SP1.Sp1BusType.byteLookup":
+   [{"id": "ApcOptimizer___SP1___Sp1BusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.SP1.Sp1BusType":
+   [{"id": "ApcOptimizer___SP1___Sp1BusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.violates":
+   [{"id": "ApcOptimizer___OpenVM___violates", "data": null, "address": "/"}],
+   "ApcOptimizer.OpenVM.openVmOptimizer_maintainsCorrectness":
+   [{"id": "ApcOptimizer___OpenVM___openVmOptimizer_maintainsCorrectness",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.openVmBusSemantics":
+   [{"id": "ApcOptimizer___OpenVM___openVmBusSemantics",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.breaksInvariant":
+   [{"id": "ApcOptimizer___OpenVM___breaksInvariant",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.OpenVmBusType.variableRangeChecker":
+   [{"id": "ApcOptimizer___OpenVM___OpenVmBusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.OpenVmBusType.tupleRangeChecker":
+   [{"id": "ApcOptimizer___OpenVM___OpenVmBusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.OpenVmBusType.pcLookup":
+   [{"id": "ApcOptimizer___OpenVM___OpenVmBusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.OpenVmBusType.memory":
+   [{"id": "ApcOptimizer___OpenVM___OpenVmBusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.OpenVmBusType.executionBridge":
+   [{"id": "ApcOptimizer___OpenVM___OpenVmBusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.OpenVmBusType.bitwiseLookup":
+   [{"id": "ApcOptimizer___OpenVM___OpenVmBusType___executionBridge",
+     "data": null,
+     "address": "/"}],
+   "ApcOptimizer.OpenVM.OpenVmBusType":
+   [{"id": "ApcOptimizer___OpenVM___OpenVmBusType___executionBridge",
+     "data": null,
+     "address": "/"}]}}}

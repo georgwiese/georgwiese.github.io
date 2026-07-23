@@ -1,0 +1,1 @@
+window.docContents[146].resolve({"/#apc-optimizer___-A-Verified-Constraint-System-Optimizer--VM-instantiations":{"contents":"\n\n\n\n","context":"apc-optimizer: A Verified Constraint-System Optimizer","header":"5. VM instantiations","id":"/#apc-optimizer___-A-Verified-Constraint-System-Optimizer--VM-instantiations"}});
