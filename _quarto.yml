@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - apc-optimizer-timing-viewer/
 
 website:
   title: "Blog"
